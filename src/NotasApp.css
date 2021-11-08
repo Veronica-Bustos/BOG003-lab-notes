@@ -1,0 +1,116 @@
+.contenedor-notas {
+    padding: 10px;
+    height: 100vh;
+    background-color: #282c34;
+    color: white;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 80px 1fr;
+    grid-auto-columns: 1fr;
+    gap: 10px 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "barra-superior barra-superior"
+        "listado-notas detalle-nota";
+}
+
+.barra-superior {
+    background-color: #454c5a;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    grid-area: barra-superior;
+}
+
+.listado-notas {
+    background-color: #454c5a;
+    border-radius: 10px;
+    grid-area: listado-notas;
+    padding: 5px;
+    overflow-y: auto;
+}
+
+.detalle-nota {
+    background-color: #454c5a;
+    border-radius: 10px;
+    grid-area: detalle-nota;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.acciones {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+button {
+    background-color: #515b6c;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+}
+
+.item-nota {
+    background-color: #515b6c;
+    width: 100%;
+    height: 50px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.item-nota.activa {
+    background-color: #b2c7ec;
+    color: #515b6c;
+}
+
+.item-titulo {
+    font-size: 12pt;
+}
+
+.item-fecha {
+    color: #bbbbbb;
+    font-size: 8pt;
+    align-self: end;
+}
+
+.item-nota.activo .item-fecha {
+    color: #728098;
+}
+
+.boton-agregar {
+    background-color: #454c5a;
+    border-radius: 10px;
+    grid-area: boton-agregar;
+}
+
+/* media querys */
+@media screen and (max-width: 900px) {
+    .contenedor-notas {
+        grid-template-columns: 200px 1fr;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contenedor-notas {
+        grid-template-columns: 1fr;
+        grid-template-rows: 80px 1fr;
+        grid-template-areas:
+            "barra-superior"
+            "listado-notas";
+    }
+
+    .detalle-nota {
+        display: none;
+    }
+}
