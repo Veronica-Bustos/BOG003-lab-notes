@@ -1,17 +1,21 @@
-import NotasApp from "./NotasApp";
-import Login from "./Login";
-import Registro from "./Registro";
-import { Routes, Route, Link } from "react-router-dom";
+import "./App.css";
+import ListaNotas from "./ListaNotas";
+import DetalleNota from "./DetalleNota";
+import { Route, Routes } from "react-router";
 
 //componenete de react definido como funcion-(ruteo)
 
 function App() {
     return (
-        <Routes>
-            <Route path="/" element={<NotasApp />} />
-            <Route path="login" element={<Login />} />
-            <Route path="registro" element={<Registro />} />
-        </Routes>
+        <div className="contenedor-notas">
+            <div className="barra-superior">
+                <h1>VeraNote</h1>
+            </div>
+            <ListaNotas />
+            <Routes>
+                <Route exact path="notas/1" element={<DetalleNota />} />
+            </Routes>
+        </div>
     );
 }
 
