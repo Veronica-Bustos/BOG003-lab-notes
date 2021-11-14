@@ -1,5 +1,5 @@
-import "./Registro.css";
-import { registrarUsusario } from "./auth";
+import "../css/Registro.css";
+import { registrarUsusario } from "../api/auth";
 import { useState } from "react";
 
 // Usestate devuelve el estado y la funcion para cambiar el estado

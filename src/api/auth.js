@@ -55,11 +55,13 @@ export const iniciarSesionGoogle = () => {
         .then((result) => {
             console.log(result);
             const credential = GoogleAuthProvider.credentialFromResult(result);
+            console.log(credential);
             //console.log("se registro con google...")
         })
         .catch((error) => {
             console.log(error);
             const credential = GoogleAuthProvider.credentialFromError(error);
+            console.log(credential);
             console.log("su cuenta no es valida...");
         });
 };
@@ -72,11 +74,13 @@ export const logueoConGoogle = () => {
         .then((result) => {
             console.log(result);
             const credential = GoogleAuthProvider.credentialFromResult(result);
+            console.log(credential);
            //console.log("se registro con google...")
         })
         .catch((error) => {
             console.log(error);
             const credential = GoogleAuthProvider.credentialFromError(error);
+            console.log(credential);
             console.log("su cuenta no es valida...");
         });
 };

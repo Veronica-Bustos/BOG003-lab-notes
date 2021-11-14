@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { inciarSesion, iniciarSesionGoogle } from "./auth";
-import "./Login.css";
+import { inciarSesion, iniciarSesionGoogle } from "../api/auth";
+import "../css/Login.css";
 
 function Login() {
     let [correo, setCorreo] = useState("");

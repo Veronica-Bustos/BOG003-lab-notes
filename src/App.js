@@ -1,6 +1,6 @@
-import "./App.css";
-import ListaNotas from "./ListaNotas";
-import DetalleNota from "./DetalleNota";
+import "./css/App.css";
+import ListaNotas from "./components/ListaNotas";
+import DetalleNota from "./components/DetalleNota";
 import { Route, Routes } from "react-router";
 
 //componenete de react definido como funcion-(ruteo)
